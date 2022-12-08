@@ -1,18 +1,19 @@
-def gen_range(start, end, step=1):
-    while start < end:
-        yield start
-        start += step
+def memoize(fun):
+    memory = {}
+
+    def start(*args, **kwargs):
+        if args not in memory:
+            memory[args] = fun(*args)
+        return memory[args]
+
+    return start
 
 
-def list_range(start, end, step=1):
-    new_list = []
-    while start < end:
-        new_list.append(start)
-        start += step
-    return new_list
+@memoize
+def fib(n):
+    if n == 0 or n == 1:
+        return n
+    return fib(n - 1) + fib(n - 2)
 
 
-g = gen_range(10, 20)
-for i in g:
-    if i == 15:
-        g.throw(ValueError("Error"))
+print(fib(40))
