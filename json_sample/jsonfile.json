@@ -1,0 +1,17 @@
+{
+    "name": "sadegh",
+    "familyName": "khoshbayan",
+    "marks": {
+        "riyazi": [
+            20,
+            14,
+            12
+        ],
+        "fizik": [
+            20,
+            15,
+            13
+        ]
+    },
+    "sex": null
+}
