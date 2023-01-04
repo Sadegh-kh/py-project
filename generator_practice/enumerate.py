@@ -1,7 +1,7 @@
 def list_counter(old_list):
     i = 0
     while i < len(old_list):
-        yield tuple([i, old_list[i]])
+        yield f"{i}  {old_list[i]}"
         i += 1
 
 
