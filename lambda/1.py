@@ -11,3 +11,7 @@ for i in list_number:
 print(
     f"even number is : {even_list}"
     f"\nodd number is : {odd_list}")
+
+# 2=>
+odd = list(filter(lambda num: num % 2 != 0, list_number))
+print(odd)
