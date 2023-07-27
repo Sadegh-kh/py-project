@@ -1,0 +1,12 @@
+graph = {}
+graph['sadegh'] = ['ali', 'mmd', 'david']
+graph['ali'] = ['mortar', 'mmd', 'sobhan']
+graph['mmd'] = ['abas', 'sara']
+graph['abas'] = []
+graph['sara'] = ['fateme']
+graph['sobhan'] = []
+graph['mortar'] = []
+graph['david'] = ['hani']
+graph['hani'] = ['mohadese', "fateme'm"]
+graph['mohadese'] = []
+graph['fateme'] = []
