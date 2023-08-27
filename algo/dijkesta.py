@@ -1,29 +1,31 @@
+from myprofiler import profile
+
 # the trade graph for smallest cost to get piano
 graph = {}
-graph['book'] = {'poster': 0, 'lp': 5}
-graph['poster'] = {'guitar': 30, 'drums': 35}
-graph['lp'] = {'guitar': 15, 'drums': 20}
-graph['guitar'] = {'piano': 20}
-graph['drums'] = {'piano': 10}
-graph['piano'] = {}
+graph["book"] = {"poster": 0, "lp": 5}
+graph["poster"] = {"guitar": 30, "drums": 35}
+graph["lp"] = {"guitar": 15, "drums": 20}
+graph["guitar"] = {"piano": 20}
+graph["drums"] = {"piano": 10}
+graph["piano"] = {}
 
-infinity = float('inf')
+infinity = float("inf")
 
 # the costs start form book
 costs = {}
-costs['poster'] = 0
-costs['lp'] = 5
-costs['guitar'] = infinity
-costs['drums'] = infinity
-costs['piano'] = infinity
+costs["poster"] = 0
+costs["lp"] = 5
+costs["guitar"] = infinity
+costs["drums"] = infinity
+costs["piano"] = infinity
 
 # parents hash table for path
 parents = {}
-parents['poster'] = 'book'
-parents['lp'] = 'book'
-parents['guitar'] = None
-parents['drums'] = None
-parents['piano'] = None
+parents["poster"] = "book"
+parents["lp"] = "book"
+parents["guitar"] = None
+parents["drums"] = None
+parents["piano"] = None
 
 # list of processed node
 processed = []
@@ -62,7 +64,7 @@ def dijkstra(start_node, end_node):
     return path
 
 
-print('The lowest costs from book to piano is: ', end='\n\n')
-for i in dijkstra('book', 'piano'):
+print("The lowest costs from book to piano is: ", end="\n\n")
+for i in dijkstra("book", "piano"):
     print(i, end=" ")
 print()
