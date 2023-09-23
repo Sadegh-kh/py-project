@@ -15,10 +15,5 @@ class Solution:
         return int(str(num).replace("6", "9", 1))
 
 
-# s = Solution()
-# print(s.maximum_69_number(9669))
-num = "96679"
-finded_first_6 = num.find("6")
-
-
-print(num.replace("6", "9", 1))
+s = Solution()
+print(s.maximum_69_number(9669))
