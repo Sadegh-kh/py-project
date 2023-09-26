@@ -41,7 +41,7 @@
 tags = ["programming tag", "programming-tag", "programming_tag"]
 new_tags = set()
 for tag in tags:
-    tag = tag.replace(" ", "_")
+    tag = tag.replace(" ", '_')
     tag = tag.replace("-", "_")
     new_tags.add(tag)
 
